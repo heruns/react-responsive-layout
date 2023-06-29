@@ -8,12 +8,15 @@ module.exports = {
         // 关于 additionalData: https://github.com/webpack-contrib/sass-loader#additionaldata
         additionalData: (content, loaderContext) => {
           const { resourcePath, rootContext } = loaderContext
+          // 当前文件的相对路径
           const relativePath = path.relative(rootContext, resourcePath)
             .split(path.sep)
             .join('/')
+          // 待引入的文件
           const filesToImport = ['src/styles/function.scss']
 
           if (/\.scss$/.test(relativePath) && !filesToImport.includes(relativePath)) {
+            // 如果当前文件后缀名为 .scss，则在文件开头添加需要引入的文件
             const importStatements = filesToImport
               .map(file => `@import "${file.replace('src', '@')}";`)
               .join('\n')

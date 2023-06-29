@@ -2,6 +2,8 @@
 
 ## 相关介绍
 
+详细介绍：[《React Hook 和 SCSS 结合的响应式布局方案》](https://juejin.cn/spost/7250073877724233784)
+
 建议配合 VS Code 插件使用，以提高开发效率：[Bihu FE Tools](https://marketplace.visualstudio.com/items?itemName=bihu.bihu-code-snippets)
 
 ## 启动步骤
