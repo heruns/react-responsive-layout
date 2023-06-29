@@ -1,0 +1,4 @@
+// 将 px 转成 vw
+@function px2vw($px, $base: 375px) {
+  @return calc($px / $base) * 100vw;
+}

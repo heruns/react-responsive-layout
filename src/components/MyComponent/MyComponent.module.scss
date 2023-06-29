@@ -1,0 +1,29 @@
+.myComponent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    width: 500px;
+    height: 400px;
+    background-color: #FF6666;
+  }
+}
+
+:global(.mobile) {
+  .myComponent {
+    .box {
+      width: px2vw(300px);
+      height: px2vw(300px);
+      font-size: px2vw(35px);
+      background-color: #0099CC;
+    }
+  }
+}
